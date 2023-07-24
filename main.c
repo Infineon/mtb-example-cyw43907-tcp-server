@@ -8,15 +8,15 @@
 *
 *
 *******************************************************************************
-* $ Copyright 2021 Cypress Semiconductor $
+* $ Copyright 2021-2023 Cypress Semiconductor $
 *******************************************************************************/
 
-/* Header file includes */
+/* Header file includes. */
 #include "cyhal.h"
 #include "cybsp.h"
 #include "cy_retarget_io.h"
 
-/* FreeRTOS header file */
+/* FreeRTOS header file. */
 #include <FreeRTOS.h>
 #include <task.h>
 
@@ -76,7 +76,7 @@ int main(void)
     printf("****************** "
            "CYW43907 TCP Server"
            "****************** \r\n\n");
-   /* Create the task to establish a connection to a TCP client */
+   /* Create the task to establish a connection to a TCP client. */
     xTaskCreate(tcp_server_task, "Network task", TCP_SERVER_TASK_STACK_SIZE, NULL, 
                TCP_SERVER_TASK_PRIORITY, &server_task_handle);
 
